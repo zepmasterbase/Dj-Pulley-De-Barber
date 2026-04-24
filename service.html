@@ -1,70 +1,251 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Services | Dj Pulley Barber</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="theme-color" content="#0b0b0f" />
+<title>Services | DJ Pulley Barber</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Inter;overflow-x:hidden}
-body{background:#0b0b0f;color:#fff}
-.header{position:sticky;top:0;background:rgba(10,10,14,.8);backdrop-filter:blur(18px);padding:14px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.06)}
-.header img{width:38px;border-radius:10px}
-.title{padding:20px;text-align:center}
-.title h1{font-size:22px}
-.title p{color:#aaa;font-size:12px;margin-top:6px}
-.tabs{display:flex;gap:8px;overflow-x:auto;padding:10px}
-.tab{padding:8px 12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:20px;font-size:12px;white-space:nowrap;cursor:pointer}
-.tab.active{background:#25D366;color:#000}
-.services{padding:10px}
-.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:14px;border-radius:16px;margin-bottom:10px;transition:.3s}
-.card:hover{transform:scale(1.02);border-color:#25D366}
-.card h3{font-size:14px}
-.card p{font-size:12px;color:#aaa;margin-top:4px}
-.price{margin-top:8px;font-size:13px;color:#25D366}
-.btn{display:block;margin-top:10px;padding:12px;border-radius:12px;text-align:center;background:#25D366;color:#000;text-decoration:none;font-weight:700}
-.fab{position:fixed;bottom:70px;right:14px;background:#25D366;color:#000;padding:14px 16px;border-radius:50px;font-weight:700;text-decoration:none}
-.bottom{position:fixed;bottom:0;width:100%;max-width:480px;left:50%;transform:translateX(-50%);display:flex;justify-content:space-around;background:rgba(10,10,14,.85);padding:10px;border-top:1px solid rgba(255,255,255,.06)}
-.bottom a{color:#aaa;font-size:11px;text-decoration:none}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  -webkit-tap-highlight-color:transparent;
+}
+
+html,body{
+  width:100%;
+  overflow-x:hidden;
+  font-family:Inter;
+  background:#0b0b0f;
+  color:#fff;
+}
+
+/* APP WRAPPER */
+.app{
+  max-width:480px;
+  margin:auto;
+  padding-bottom:90px;
+}
+
+/* HEADER */
+.header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 16px;
+  background:rgba(10,10,14,0.7);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.header h1{
+  font-size:14px;
+  font-weight:600;
+}
+
+/* HERO */
+.hero{
+  padding:22px 16px;
+  text-align:center;
+}
+
+.hero h2{
+  font-size:24px;
+}
+
+.hero p{
+  font-size:13px;
+  color:#bdbdbd;
+  margin-top:6px;
+}
+
+/* SECTION TITLE */
+.title{
+  font-size:13px;
+  color:#aaa;
+  margin:16px 16px 10px;
+}
+
+/* CARD */
+.card{
+  margin:10px 16px;
+  padding:14px;
+  border-radius:16px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+  transform:translateY(20px);
+  opacity:0;
+  animation:fadeUp 0.6s ease forwards;
+}
+
+.card:nth-child(2){ animation-delay:0.1s; }
+.card:nth-child(3){ animation-delay:0.2s; }
+.card:nth-child(4){ animation-delay:0.3s; }
+.card:nth-child(5){ animation-delay:0.4s; }
+
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.card h3{
+  font-size:15px;
+  font-weight:600;
+}
+
+.price{
+  margin-top:6px;
+  font-size:14px;
+  color:#25D366;
+  font-weight:600;
+}
+
+.card p{
+  font-size:12px;
+  color:#aaa;
+  margin-top:6px;
+  line-height:1.4;
+}
+
+/* BUTTON */
+.btn{
+  display:block;
+  margin-top:12px;
+  padding:12px;
+  text-align:center;
+  border-radius:12px;
+  font-weight:600;
+  text-decoration:none;
+  font-size:13px;
+}
+
+.whatsapp{
+  background:#25D366;
+  color:#000;
+}
+
+/* FLOAT */
+.fab{
+  position:fixed;
+  right:16px;
+  bottom:70px;
+  background:#25D366;
+  color:#000;
+  padding:14px 16px;
+  border-radius:50px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 10px 30px rgba(37,211,102,0.25);
+}
+
+/* NAV */
+.bottom-nav{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  max-width:480px;
+  margin:auto;
+  display:flex;
+  justify-content:space-around;
+  padding:10px;
+  background:rgba(10,10,14,0.85);
+  backdrop-filter:blur(16px);
+  border-top:1px solid rgba(255,255,255,0.06);
+}
+
+.bottom-nav a{
+  color:#aaa;
+  font-size:11px;
+  text-decoration:none;
+}
 </style>
 </head>
-<body><div class="header">
-<img src="https://pe56d.s3.amazonaws.com/o_1jmvhkagb1vs04ns7of5bh17r715.png" />
-<strong>Services</strong>
-</div><div class="title">
-<h1>Choose Your Cut</h1>
-<p>Select a service and book instantly via WhatsApp</p>
-</div><div class="tabs">
-<div class="tab active">All</div>
-<div class="tab">Fades</div>
-<div class="tab">Beard</div>
-<div class="tab">Home</div>
-<div class="tab">Kids</div>
-</div><div class="services"><div class="card">
-<h3>Skin Fade</h3>
-<p>Sharp clean fade with precision lineup</p>
-<div class="price">From RXX</div>
-<a class="btn" href="https://wa.me/27694397338?text=I%20want%20Skin%20Fade">Book Now</a>
-</div><div class="card">
-<h3>Beard Sculpting</h3>
-<p>Detailed beard shaping & grooming</p>
-<div class="price">From RXX</div>
-<a class="btn" href="https://wa.me/27694397338?text=I%20want%20Beard%20Trim">Book Now</a>
-</div><div class="card">
-<h3>Home Service</h3>
-<p>We come to your location fully equipped</p>
-<div class="price">+ Travel Fee</div>
-<a class="btn" href="https://wa.me/27694397338?text=I%20want%20Home%20Service">Book Now</a>
-</div><div class="card">
-<h3>Kids Cut</h3>
-<p>Clean and safe haircut for children</p>
-<div class="price">From RXX</div>
-<a class="btn" href="https://wa.me/27694397338?text=Kids%20Cut">Book Now</a>
-</div></div><a class="fab" href="https://wa.me/27694397338">Book</a>
 
-<div class="bottom">
+<body>
+
+<div class="app">
+
+<!-- HEADER -->
+<div class="header">
+<h1>DJ PULLEY BARBER</h1>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<h2>Premium Barber Services</h2>
+<p>Book your cut instantly via WhatsApp. We come to you or you come to us.</p>
+</div>
+
+<div class="title">💈 Core Services</div>
+
+<!-- BASIC CUT -->
+<div class="card">
+<h3>Basic Cut</h3>
+<div class="price">R100</div>
+<p>Clean professional haircut without fade. Simple, sharp finish.</p>
+<a class="btn whatsapp" href="https://wa.me/27694397338?text=I%20want%20a%20Basic%20Cut%20(R100)">Book on WhatsApp</a>
+</div>
+
+<!-- FADE -->
+<div class="card">
+<h3>Fade Cut (Low / Mid / Taper)</h3>
+<div class="price">R120</div>
+<p>Modern fade styles with clean blending and sharp outline.</p>
+<a class="btn whatsapp" href="https://wa.me/27694397338?text=I%20want%20a%20Fade%20Cut%20(R120)">Book on WhatsApp</a>
+</div>
+
+<!-- SKIN FADE -->
+<div class="card">
+<h3>Skin Fade (Premium Precision)</h3>
+<div class="price">R150</div>
+<p>Zero fade finish with razor sharp detailing and blend perfection.</p>
+<a class="btn whatsapp" href="https://wa.me/27694397338?text=I%20want%20a%20Skin%20Fade%20(R150)">Book on WhatsApp</a>
+</div>
+
+<div class="title">🧔 Beard Services</div>
+
+<!-- BEARD -->
+<div class="card">
+<h3>Beard Shape & Line-up</h3>
+<div class="price">R90</div>
+<p>Defined beard shaping with clean razor edge finish.</p>
+<a class="btn whatsapp" href="https://wa.me/27694397338?text=I%20want%20Beard%20Shaping%20(R90)">Book on WhatsApp</a>
+</div>
+
+<div class="title">💎 VIP Experience</div>
+
+<!-- VIP -->
+<div class="card">
+<h3>VIP Grooming Experience</h3>
+<div class="price">R280</div>
+<p>Fade + beard sculpt + hot towel + razor finish. Full premium treatment.</p>
+<a class="btn whatsapp" href="https://wa.me/27694397338?text=I%20want%20VIP%20Grooming%20(R280)">Book VIP on WhatsApp</a>
+</div>
+
+</div>
+
+<!-- FLOAT -->
+<a class="fab" href="https://wa.me/27694397338?text=I%20want%20to%20book%20a%20cut">Book</a>
+
+<!-- NAV -->
+<div class="bottom-nav">
 <a href="index.html">Home</a>
-<a href="services.html">Services</a>
+<a href="service.html">Services</a>
 <a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
-</div></body>
+<a href="#">Book</a>
+<a href="#">Contact</a>
+</div>
+
+</body>
 </html>
