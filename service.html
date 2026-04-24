@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="theme-color" content="#0b0b0f" />
-<title>Services | DJ Pulley Barber</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
+<title>Services | DJ Pulley Barber</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"><style>
 *{
   margin:0;
   padding:0;
@@ -104,7 +99,6 @@ html,body{
   line-height:1.4;
 }
 
-/* BUTTON */
 .btn{
   display:block;
   margin-top:12px;
@@ -121,7 +115,6 @@ html,body{
   color:#000;
 }
 
-/* AI SECTION */
 select{
   width:100%;
   margin-top:12px;
@@ -138,7 +131,6 @@ select{
   color:#ddd;
 }
 
-/* NAV */
 .bottom-nav{
   position:fixed;
   bottom:0;
@@ -163,93 +155,60 @@ select{
 .bottom-nav a:hover{
   color:#25D366;
 }
-</style>
-</head>
-
-<body>
-
-<div class="app">
-
-<!-- HEADER -->
-<div class="header">
-<h1>DJ PULLEY DE BARBER SERVICES</h1>
-</div>
-
-<!-- HERO -->
-<div class="hero">
+</style></head><body><div class="app"><div class="header">
+<h1>DJ PULLEY BARBER SERVICES</h1>
+</div><div class="hero">
 <h2>Premium Barber Experience</h2>
-<p>Book instantly or get Premium hairstyle recommendations before your cut.</p>
-</div>
-
-<!-- 🧠 Premium SYSTEM -->
-<div class="card">
-<h3>🧠 Premium Hairstyle Finder</h3>
-<p>Choose your face shape and get instant haircut recommendations.</p>
-
-<select id="faceType">
+<p>Book instantly or get AI hairstyle recommendations before your cut.</p>
+</div><div class="card">
+<h3>🧠 AI Hairstyle Finder</h3>
+<p>Choose your face shape and get instant haircut recommendations.</p><select id="faceType">
   <option value="">Select Face Shape</option>
   <option value="oval">Oval Face</option>
   <option value="round">Round Face</option>
   <option value="square">Square Face</option>
   <option value="diamond">Diamond Face</option>
   <option value="heart">Heart Face</option>
-</select>
-
-<button onclick="getStyle()" class="btn whatsapp">Get Recommendation</button>
+</select><button onclick="getStyle()" class="btn whatsapp">Get Recommendation</button>
 
 <div id="result"></div>
-</div>
-
-<!-- SERVICES -->
-<div class="title">💈 Pricing Menu</div>
-
-<div class="card">
+</div><div class="title">💈 Pricing Menu</div><div class="card">
 <h3>Basic Cut</h3>
 <div class="price">R100</div>
 <p>Clean simple haircut with sharp finish.</p>
 <a class="btn whatsapp" href="https://wa.me/27694397338?text=Basic%20Cut%20R100">Book</a>
-</div>
-
-<div class="card">
+</div><div class="card">
 <h3>Fade Cut</h3>
 <div class="price">R120</div>
 <p>Low / mid / taper fade with clean blend.</p>
 <a class="btn whatsapp" href="https://wa.me/27694397338?text=Fade%20Cut%20R120">Book</a>
-</div>
-
-<div class="card">
+</div><div class="card">
 <h3>Skin Fade</h3>
 <div class="price">R150</div>
 <p>Zero fade precision with sharp detailing.</p>
 <a class="btn whatsapp" href="https://wa.me/27694397338?text=Skin%20Fade%20R150">Book</a>
-</div>
-
-<div class="card">
+</div><div class="card">
 <h3>Beard Shape</h3>
 <div class="price">R90</div>
 <p>Beard lining and structured shaping.</p>
 <a class="btn whatsapp" href="https://wa.me/27694397338?text=Beard%20Shape%20R90">Book</a>
-</div>
-
-<div class="card">
-<h3>VIP Home Grooming</h3>
-<div class="price">R280 + 50 Travel Free</div>
+</div><div class="card">
+<h3>VIP Grooming</h3>
+<div class="price">R280</div>
 <p>Fade + beard + hot towel + razor finish.</p>
 <a class="btn whatsapp" href="https://wa.me/27694397338?text=VIP%20Grooming%20R280">Book VIP</a>
-</div>
-
-</div>
-
-<!-- NAV -->
-<div class="bottom-nav">
+</div><div class="card">
+<h3>Home Service Barber</h3>
+<div class="price">R300 + R50 Travel Fee</div>
+<p>We come to your location fully equipped. Travel fee applies depending on distance.</p>
+<a class="btn whatsapp" href="https://wa.me/27694397338?text=Home%20Service%20R300%20%2B%20R50%20Travel%20Fee">Book Home Service</a>
+</div></div><div class="bottom-nav">
 <a href="index.html">Home</a>
 <a href="service.html">Services</a>
 <a href="gallery.html">Gallery</a>
 <a href="#">Book</a>
 <a href="#">Contact</a>
-</div>
-
-<script>
+</div><script>
 function getStyle(){
   const face = document.getElementById("faceType").value;
   let output = "";
@@ -275,7 +234,5 @@ function getStyle(){
 
   document.getElementById("result").innerHTML = output;
 }
-</script>
-
-</body>
+</script></body>
 </html>
