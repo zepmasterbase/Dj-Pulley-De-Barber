@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="theme-color" content="#0b0b0f" />
+<title>Gallery | DJ Pulley Barber</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  -webkit-tap-highlight-color:transparent;
+}
+
+html,body{
+  width:100%;
+  overflow-x:hidden;
+  font-family:Inter;
+  background:#0b0b0f;
+  color:#fff;
+}
+
+/* APP WRAPPER */
+.app{
+  max-width:480px;
+  margin:auto;
+  padding-bottom:80px;
+}
+
+/* HEADER */
+.header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  padding:14px 16px;
+  background:rgba(10,10,14,0.7);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  text-align:center;
+}
+
+.header h1{
+  font-size:14px;
+  font-weight:600;
+}
+
+/* HERO */
+.hero{
+  padding:18px 16px;
+  text-align:center;
+}
+
+.hero h2{
+  font-size:22px;
+}
+
+.hero p{
+  font-size:12px;
+  color:#aaa;
+  margin-top:6px;
+}
+
+/* FILTER BAR (STYLE ONLY) */
+.filters{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding:10px 16px;
+}
+
+.filters span{
+  font-size:11px;
+  padding:6px 10px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  white-space:nowrap;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:6px;
+  padding:10px 10px 80px;
+}
+
+/* IMAGE CARD */
+.item{
+  position:relative;
+  overflow:hidden;
+  border-radius:14px;
+  aspect-ratio:1/1;
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeUp 0.6s ease forwards;
+}
+
+.item:nth-child(1){animation-delay:0.05s;}
+.item:nth-child(2){animation-delay:0.1s;}
+.item:nth-child(3){animation-delay:0.15s;}
+.item:nth-child(4){animation-delay:0.2s;}
+.item:nth-child(5){animation-delay:0.25s;}
+.item:nth-child(6){animation-delay:0.3s;}
+.item:nth-child(7){animation-delay:0.35s;}
+.item:nth-child(8){animation-delay:0.4s;}
+.item:nth-child(9){animation-delay:0.45s;}
+.item:nth-child(10){animation-delay:0.5s;}
+
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 0.4s ease;
+}
+
+/* zoom hover/tap feel */
+.item:active img{
+  transform:scale(1.1);
+}
+
+/* overlay glow */
+.item::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,0.35), transparent);
+}
+
+/* LABEL */
+.label{
+  position:absolute;
+  bottom:8px;
+  left:8px;
+  font-size:10px;
+  background:rgba(0,0,0,0.4);
+  padding:4px 8px;
+  border-radius:20px;
+  backdrop-filter:blur(10px);
+}
+
+/* NAV */
+.bottom-nav{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  max-width:480px;
+  margin:auto;
+  display:flex;
+  justify-content:space-around;
+  padding:10px;
+  background:rgba(10,10,14,0.85);
+  backdrop-filter:blur(16px);
+  border-top:1px solid rgba(255,255,255,0.06);
+}
+
+.bottom-nav a{
+  color:#aaa;
+  font-size:11px;
+  text-decoration:none;
+}
+
+.bottom-nav a:hover{
+  color:#25D366;
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+<div class="header">
+<h1>DJ PULLEY BARBER GALLERY</h1>
+</div>
+
+<div class="hero">
+<h2>Fresh Cuts. Real Clients.</h2>
+<p>Premium barbering moments captured across Randfontein & mobile sessions.</p>
+</div>
+
+<div class="filters">
+<span>All</span>
+<span>Fades</span>
+<span>Kids Cuts</span>
+<span>Beards</span>
+<span>VIP</span>
+</div>
+
+<div class="grid">
+
+<!-- ADULT FADES -->
+<div class="item">
+<img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033" />
+<div class="label">Skin Fade</div>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186" />
+<div class="label">Classic Fade</div>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c" />
+<div class="label">Beard Line-up</div>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937" />
+<div class="label">Low Fade</div>
+</div>
+
+<!-- AFRICAN ADULT CLIENTS STYLE -->
+<div class="item">
+<img src="https://images.unsplash.com/photo-1611691541736-9d4b3b5c7f8f" />
+<div class="label">Wave Cut</div>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3" />
+<div class="label">Clean Cut</div>
+</div>
+
+<!-- KIDS CUTS -->
+<div class="item">
+<img src="https://images.unsplash.com/photo-1604881991720-f91add269bed" />
+<div class="label">Kids Fade</div>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" />
+<div class="label">Kids Style</div>
+</div>
+
+<!-- PREMIUM VIBE -->
+<div class="item">
+<img src="https://images.unsplash.com/photo-1620121684840-edffcfc4b878" />
+<div class="label">VIP Finish</div>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1622295028767-8a0b1c5e1d5c" />
+<div class="label">Barber Detail</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- NAV -->
+<div class="bottom-nav">
+<a href="index.html">Home</a>
+<a href="service.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="#">Book</a>
+<a href="#">Contact</a>
+</div>
+
+</body>
+</html>
