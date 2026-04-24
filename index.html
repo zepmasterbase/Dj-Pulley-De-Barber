@@ -3,7 +3,14 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="theme-color" content="#0b0b0f" />
-<title>Dj Pulley De Barber</title><!-- PWA MANIFEST (INLINE) --><link rel="manifest" href="data:application/json,{\"name\":\"Dj Pulley Barber\",\"short_name\":\"Pulley Barber\",\"start_url\":\"./\",\"display\":\"standalone\",\"background_color\":\"#0b0b0f\",\"theme_color\":\"#0b0b0f\",\"icons\":[]}" /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"><style>
+<title>Dj Pulley De Barber</title>
+
+<!-- PWA MANIFEST (INLINE) -->
+<link rel="manifest" href="data:application/json,{\"name\":\"Dj Pulley Barber\",\"short_name\":\"Pulley Barber\",\"start_url\":\"./\",\"display\":\"standalone\",\"background_color\":\"#0b0b0f\",\"theme_color\":\"#0b0b0f\",\"icons\":[]}" />
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
 *{
   margin:0;
   padding:0;
@@ -19,14 +26,12 @@ html,body{
   color:#fff;
 }
 
-/* APP CONTAINER */
 .app{
   max-width:480px;
   margin:auto;
   padding-bottom:80px;
 }
 
-/* TOP HEADER */
 .header{
   position:sticky;
   top:0;
@@ -51,7 +56,6 @@ html,body{
   letter-spacing:0.5px;
 }
 
-/* HERO APP STYLE */
 .hero{
   padding:24px 16px;
   text-align:center;
@@ -91,7 +95,6 @@ html,body{
   color:#fff;
 }
 
-/* SECTIONS */
 .section{
   padding:14px 16px;
 }
@@ -103,7 +106,6 @@ html,body{
   color:#d1d1d1;
 }
 
-/* SERVICE CARDS */
 .card{
   background:rgba(255,255,255,0.04);
   border:1px solid rgba(255,255,255,0.08);
@@ -122,7 +124,6 @@ html,body{
   margin-top:4px;
 }
 
-/* GALLERY */
 .grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -136,7 +137,6 @@ html,body{
   border-radius:12px;
 }
 
-/* BOTTOM NAV (APP STYLE) */
 .bottom-nav{
   position:fixed;
   bottom:0;
@@ -163,7 +163,6 @@ html,body{
   color:#25D366;
 }
 
-/* FLOATING BOOK BUTTON */
 .fab{
   position:fixed;
   right:16px;
@@ -176,27 +175,45 @@ html,body{
   text-decoration:none;
   box-shadow:0 10px 30px rgba(37,211,102,0.25);
 }
+</style>
+</head>
 
-</style></head><body><div class="app"><!-- HEADER --><div class="header">
+<body>
+
+<div class="app">
+
+<div class="header">
 <img src="https://pe56d.s3.amazonaws.com/o_1jmvhkagb1vs04ns7of5bh17r715.png" />
 <h1>DJ PULLEY BARBER</h1>
-</div><!-- HERO --><div class="hero">
+</div>
+
+<div class="hero">
 <h2>Premium Cuts. Mobile Barbering.</h2>
 <p>Home service & shop appointments in Randfontein. Book instantly via WhatsApp.</p>
 <a class="btn green" href="https://wa.me/27694397338?text=Hi%20I%20want%20to%20book%20a%20cut">Book Home Service</a>
 <a class="btn glass" href="#gallery">View Gallery</a>
-</div><!-- SERVICES --><div class="section">
-<div class="title">Services</div><div class="card">
+</div>
+
+<div class="section">
+<div class="title">Services</div>
+
+<div class="card">
 <h3>Home Barber Service</h3>
 <p>We come to your location fully equipped.</p>
-</div><div class="card">
+</div>
+
+<div class="card">
 <h3>Shop Appointments</h3>
 <p>Walk-in style premium grooming sessions.</p>
-</div><div class="card">
+</div>
+
+<div class="card">
 <h3>Fade & Beard Styling</h3>
 <p>Sharp modern cuts tailored to your style.</p>
 </div>
-</div><!-- GALLERY --><div class="section" id="gallery">
+</div>
+
+<div class="section" id="gallery">
 <div class="title">Gallery</div>
 <div class="grid">
 <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186" />
@@ -204,23 +221,33 @@ html,body{
 <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c" />
 <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937" />
 </div>
-</div><!-- CONTACT --><div class="section">
+</div>
+
+<div class="section">
 <div class="title">Contact</div>
 <div class="card">
 <p>WhatsApp: +27 69 439 7338</p>
 </div>
-</div></div><!-- FLOATING BUTTON --><a class="fab" href="https://wa.me/27694397338?text=Hi%20I%20want%20to%20book">Book</a>
+</div>
 
-<!-- BOTTOM NAV --><div class="bottom-nav">
+</div>
+
+<a class="fab" href="https://wa.me/27694397338?text=Hi%20I%20want%20to%20book">Book</a>
+
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
 <a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
+<a href="service.html">Services</a>
+<a href="gallery.html">Gallery</a>
 <a href="#">Book</a>
 <a href="#">Contact</a>
-</div><script>
-// SIMPLE PWA SERVICE WORKER
+</div>
+
+<script>
 if('serviceWorker' in navigator){
   navigator.serviceWorker.register('data:application/javascript,console.log("PWA Ready")');
 }
-</script></body>
+</script>
+
+</body>
 </html>
