@@ -1,9 +1,14 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="theme-color" content="#0b0b0f" />
-<title>Services | DJ Pulley Barber</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"><style>
+<title>Services | DJ Pulley Barber</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
 *{
   margin:0;
   padding:0;
@@ -19,7 +24,6 @@ html,body{
   color:#fff;
 }
 
-/* APP WRAPPER */
 .app{
   max-width:480px;
   margin:auto;
@@ -31,54 +35,39 @@ html,body{
   position:sticky;
   top:0;
   z-index:999;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:12px 16px;
+  padding:14px 16px;
   background:rgba(10,10,14,0.7);
   backdrop-filter:blur(16px);
   border-bottom:1px solid rgba(255,255,255,0.06);
-}
-
-.header-left{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.header img{
-  width:34px;
-  height:34px;
-  border-radius:10px;
+  text-align:center;
 }
 
 .header h1{
-  font-size:13px;
+  font-size:14px;
   font-weight:600;
-  letter-spacing:0.5px;
 }
 
 /* HERO */
 .hero{
-  padding:22px 16px;
+  padding:20px 16px;
   text-align:center;
 }
 
 .hero h2{
-  font-size:24px;
+  font-size:22px;
 }
 
 .hero p{
-  font-size:13px;
-  color:#bdbdbd;
+  font-size:12px;
+  color:#aaa;
   margin-top:6px;
 }
 
-/* SECTION TITLE */
+/* SECTION */
 .title{
   font-size:13px;
   color:#aaa;
-  margin:16px 16px 10px;
+  margin:16px;
 }
 
 /* CARD */
@@ -89,21 +78,12 @@ html,body{
   background:rgba(255,255,255,0.04);
   border:1px solid rgba(255,255,255,0.08);
   backdrop-filter:blur(10px);
-  transform:translateY(20px);
-  opacity:0;
   animation:fadeUp 0.6s ease forwards;
 }
 
-.card:nth-child(2){ animation-delay:0.1s; }
-.card:nth-child(3){ animation-delay:0.2s; }
-.card:nth-child(4){ animation-delay:0.3s; }
-.card:nth-child(5){ animation-delay:0.4s; }
-
 @keyframes fadeUp{
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
 }
 
 .card h3{
@@ -112,10 +92,9 @@ html,body{
 }
 
 .price{
-  margin-top:6px;
-  font-size:14px;
   color:#25D366;
   font-weight:600;
+  margin-top:5px;
 }
 
 .card p{
@@ -142,18 +121,21 @@ html,body{
   color:#000;
 }
 
-/* FLOAT */
-.fab{
-  position:fixed;
-  right:16px;
-  bottom:70px;
-  background:#25D366;
-  color:#000;
-  padding:14px 16px;
-  border-radius:50px;
-  font-weight:700;
-  text-decoration:none;
-  box-shadow:0 10px 30px rgba(37,211,102,0.25);
+/* AI SECTION */
+select{
+  width:100%;
+  margin-top:12px;
+  padding:12px;
+  border-radius:12px;
+  background:#111;
+  color:#fff;
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+#result{
+  margin-top:12px;
+  font-size:12px;
+  color:#ddd;
 }
 
 /* NAV */
@@ -177,51 +159,123 @@ html,body{
   font-size:11px;
   text-decoration:none;
 }
-</style></head><body><div class="app"><!-- HEADER --><div class="header">
-  <div class="header-left">
-    <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jmvhkagb1vs04ns7of5bh17r715.png" alt="logo" />
-    <h1>DJ PULLEY BARBER</h1>
-  </div>
-</div><!-- HERO --><div class="hero">
-<h2>Premium Barber Services</h2>
-<p>Book your cut instantly via WhatsApp. We come to you or you come to us.</p>
-</div><div class="title">💈 Core Services</div><!-- BASIC CUT --><div class="card">
+
+.bottom-nav a:hover{
+  color:#25D366;
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- HEADER -->
+<div class="header">
+<h1>DJ PULLEY BARBER SERVICES</h1>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<h2>Premium Barber Experience</h2>
+<p>Book instantly or get AI hairstyle recommendations before your cut.</p>
+</div>
+
+<!-- 🧠 AI SYSTEM -->
+<div class="card">
+<h3>🧠 AI Hairstyle Finder</h3>
+<p>Choose your face shape and get instant haircut recommendations.</p>
+
+<select id="faceType">
+  <option value="">Select Face Shape</option>
+  <option value="oval">Oval Face</option>
+  <option value="round">Round Face</option>
+  <option value="square">Square Face</option>
+  <option value="diamond">Diamond Face</option>
+  <option value="heart">Heart Face</option>
+</select>
+
+<button onclick="getStyle()" class="btn whatsapp">Get Recommendation</button>
+
+<div id="result"></div>
+</div>
+
+<!-- SERVICES -->
+<div class="title">💈 Pricing Menu</div>
+
+<div class="card">
 <h3>Basic Cut</h3>
 <div class="price">R100</div>
-<p>Clean professional haircut without fade. Simple, sharp finish.</p>
-<a class="btn whatsapp" href="https://wa.me/27694397338?text=I%20want%20a%20Basic%20Cut%20(R100)">Book on WhatsApp</a>
-</div><!-- FADE --><div class="card">
-<h3>Fade Cut (Low / Mid / Taper)</h3>
-<div class="price">R120</div>
-<p>Modern fade styles with clean blending and sharp outline.</p>
-<a class="btn whatsapp" href="https://wa.me/27694397338?text=I%20want%20a%20Fade%20Cut%20(R120)">Book on WhatsApp</a>
-</div><!-- SKIN FADE --><div class="card">
-<h3>Skin Fade (Premium Precision)</h3>
-<div class="price">R150</div>
-<p>Zero fade finish with razor sharp detailing and blend perfection.</p>
-<a class="btn whatsapp" href="https://wa.me/27694397338?text=I%20want%20a%20Skin%20Fade%20(R150)">Book on WhatsApp</a>
-</div><div class="title">🧔 Beard Services</div><!-- BEARD --><div class="card">
-<h3>Beard Shape & Line-up</h3>
-<div class="price">R90</div>
-<p>Defined beard shaping with clean razor edge finish.</p>
-<a class="btn whatsapp" href="https://wa.me/27694397338?text=I%20want%20Beard%20Shaping%20(R90)">Book on WhatsApp</a>
-</div><div class="title">🚗 Mobile Service</div><!-- HOME SERVICE --><div class="card">
-<h3>Home Service Barber</h3>
-<div class="price">R300 + R50 Travel Fee</div>
-<p>We come to your location fully equipped. Travel fee applies depending on distance.</p>
-<a class="btn whatsapp" href="https://wa.me/27694397338?text=I%20want%20Home%20Service%20(R100%20%2B%20R50%20Travel%20Fee)">Book on WhatsApp</a>
-</div><div class="title">💎 VIP Experience</div><!-- VIP --><div class="card">
-<h3>VIP Grooming Experience</h3>
-<div class="price">R280</div>
-<p>Fade + beard sculpt + hot towel + razor finish. Full premium treatment.</p>
-<a class="btn whatsapp" href="https://wa.me/27694397338?text=I%20want%20VIP%20Grooming%20(R280)">Book VIP on WhatsApp</a>
-</div></div><!-- FLOAT --><a class="fab" href="https://wa.me/27694397338?text=I%20want%20to%20book%20a%20cut">Book</a>
+<p>Clean simple haircut with sharp finish.</p>
+<a class="btn whatsapp" href="https://wa.me/27694397338?text=Basic%20Cut%20R100">Book</a>
+</div>
 
-<!-- NAV --><div class="bottom-nav">
+<div class="card">
+<h3>Fade Cut</h3>
+<div class="price">R120</div>
+<p>Low / mid / taper fade with clean blend.</p>
+<a class="btn whatsapp" href="https://wa.me/27694397338?text=Fade%20Cut%20R120">Book</a>
+</div>
+
+<div class="card">
+<h3>Skin Fade</h3>
+<div class="price">R150</div>
+<p>Zero fade precision with sharp detailing.</p>
+<a class="btn whatsapp" href="https://wa.me/27694397338?text=Skin%20Fade%20R150">Book</a>
+</div>
+
+<div class="card">
+<h3>Beard Shape</h3>
+<div class="price">R90</div>
+<p>Beard lining and structured shaping.</p>
+<a class="btn whatsapp" href="https://wa.me/27694397338?text=Beard%20Shape%20R90">Book</a>
+</div>
+
+<div class="card">
+<h3>VIP Grooming</h3>
+<div class="price">R280</div>
+<p>Fade + beard + hot towel + razor finish.</p>
+<a class="btn whatsapp" href="https://wa.me/27694397338?text=VIP%20Grooming%20R280">Book VIP</a>
+</div>
+
+</div>
+
+<!-- NAV -->
+<div class="bottom-nav">
 <a href="index.html">Home</a>
-<a href="services.html">Services</a>
+<a href="service.html">Services</a>
 <a href="gallery.html">Gallery</a>
 <a href="#">Book</a>
 <a href="#">Contact</a>
-</div></body>
+</div>
+
+<script>
+function getStyle(){
+  const face = document.getElementById("faceType").value;
+  let output = "";
+
+  if(face === "oval"){
+    output = "🔥 Oval Face: Low Fade, Waves, Textured Crop <br><br><a class='btn whatsapp' href='https://wa.me/27694397338?text=Oval%20Face%20Cut'>Book This Style</a>";
+  }
+  else if(face === "round"){
+    output = "🔥 Round Face: High Fade, Sponge Twist, Sharp Line-up <br><br><a class='btn whatsapp' href='https://wa.me/27694397338?text=Round%20Face%20Cut'>Book This Style</a>";
+  }
+  else if(face === "square"){
+    output = "🔥 Square Face: Buzz Fade, Waves, Beard Blend <br><br><a class='btn whatsapp' href='https://wa.me/27694397338?text=Square%20Face%20Cut'>Book This Style</a>";
+  }
+  else if(face === "diamond"){
+    output = "🔥 Diamond Face: Low Fade, Medium Beard, Soft Top <br><br><a class='btn whatsapp' href='https://wa.me/27694397338?text=Diamond%20Face%20Cut'>Book This Style</a>";
+  }
+  else if(face === "heart"){
+    output = "🔥 Heart Face: Mid Fade, Side Part, Light Beard <br><br><a class='btn whatsapp' href='https://wa.me/27694397338?text=Heart%20Face%20Cut'>Book This Style</a>";
+  }
+  else{
+    output = "Please select a face shape.";
+  }
+
+  document.getElementById("result").innerHTML = output;
+}
+</script>
+
+</body>
 </html>
