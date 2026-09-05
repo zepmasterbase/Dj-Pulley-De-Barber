@@ -1,218 +1,1268 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<meta name="theme-color" content="#0b0b0f" />
-<title>Dj Pulley De Barber</title><!-- PWA MANIFEST (INLINE) --><link rel="manifest" href="data:application/json,{\"name\":\"DJ Pulley De Barber\",\"short_name\":\"DJ Pulley De Barber\",\"start_url\":\"./\",\"display\":\"standalone\",\"background_color\":\"#0b0b0f\",\"theme_color\":\"#0b0b0f\",\"icons\":[]}" /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"><style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  -webkit-tap-highlight-color:transparent;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>Flawless Beauty by Freda | Hair • Beauty • Self-Care</title>
+  <meta name="description" content="Flawless Beauty by Freda — premium hair, beauty and self-care experiences. Book your appointment or chat instantly on WhatsApp." />
 
-html,body{
-  width:100%;
-  overflow-x:hidden;
-  font-family:Inter;
-  background:#0b0b0f;
-  color:#fff;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-.app{
-  max-width:480px;
-  margin:auto;
-  padding-bottom:80px;
-}
+  <style>
+    :root{
+      --bg:#090909;
+      --bg-soft:#111111;
+      --card:#151515;
+      --card-2:#1b1b1b;
+      --text:#f8f5ef;
+      --muted:#aaa39a;
+      --gold:#d9b66f;
+      --gold-2:#f0d7a0;
+      --ivory:#fffaf0;
+      --line:rgba(255,255,255,.09);
+      --success:#25D366;
+      --shadow:0 30px 80px rgba(0,0,0,.35);
+      --radius:24px;
+    }
 
-.header{
-  position:sticky;
-  top:0;
-  z-index:999;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:14px 16px;
-  background:rgba(10,10,14,0.7);
-  backdrop-filter:blur(16px);
-  border-bottom:1px solid rgba(255,255,255,0.06);
-}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(217,182,111,.10), transparent 28%),
+        radial-gradient(circle at 90% 0%, rgba(240,215,160,.06), transparent 24%),
+        var(--bg);
+      color:var(--text);
+      overflow-x:hidden;
+    }
 
-.header img{
-  width:42px;
-  border-radius:10px;
-}
+    img{display:block;width:100%;object-fit:cover}
+    a{text-decoration:none;color:inherit}
+    button,input,select,textarea{font:inherit}
+    button{cursor:pointer}
 
-.header h1{
-  font-size:14px;
-  font-weight:600;
-  letter-spacing:0.5px;
-}
+    .container{
+      width:min(1160px, calc(100% - 32px));
+      margin-inline:auto;
+    }
 
-.hero{
-  padding:24px 16px;
-  text-align:center;
-}
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-size:.76rem;
+      color:var(--gold-2);
+      font-weight:700;
+    }
 
-.hero h2{
-  font-size:28px;
-  margin-top:10px;
-}
+    .eyebrow::before{
+      content:"";
+      width:26px;
+      height:1px;
+      background:linear-gradient(90deg,var(--gold),transparent);
+    }
 
-.hero p{
-  font-size:13px;
-  color:#bdbdbd;
-  margin-top:8px;
-  line-height:1.4;
-}
+    h1,h2,h3{
+      font-family:"Cormorant Garamond",serif;
+      line-height:.95;
+      margin:0;
+    }
 
-.btn{
-  display:block;
-  width:100%;
-  margin-top:12px;
-  padding:14px;
-  border-radius:14px;
-  text-align:center;
-  font-weight:600;
-  text-decoration:none;
-}
+    h1{
+      font-size:clamp(3.7rem, 8vw, 7.6rem);
+      max-width:920px;
+      letter-spacing:-.045em;
+    }
 
-.green{
-  background:#25D366;
-  color:#000;
-}
+    h2{
+      font-size:clamp(2.8rem,5vw,5.3rem);
+      letter-spacing:-.035em;
+    }
 
-.glass{
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.08);
-  color:#fff;
-}
+    h3{
+      font-size:2rem;
+      letter-spacing:-.02em;
+    }
 
-.section{
-  padding:14px 16px;
-}
+    p{line-height:1.75;color:var(--muted)}
+    .section{padding:110px 0}
+    .section-head{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:30px;
+      align-items:end;
+      margin-bottom:52px;
+    }
 
-.title{
-  font-size:14px;
-  font-weight:600;
-  margin-bottom:10px;
-  color:#d1d1d1;
-}
+    .topbar{
+      position:fixed;
+      top:0;
+      inset-inline:0;
+      z-index:50;
+      backdrop-filter:blur(18px);
+      background:rgba(8,8,8,.68);
+      border-bottom:1px solid var(--line);
+    }
 
-.card{
-  background:rgba(255,255,255,0.04);
-  border:1px solid rgba(255,255,255,0.08);
-  padding:14px;
-  border-radius:14px;
-  margin-bottom:10px;
-}
+    .nav{
+      height:74px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
 
-.card h3{
-  font-size:14px;
-}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
 
-.card p{
-  font-size:12px;
-  color:#aaa;
-  margin-top:4px;
-}
+    .brand-mark{
+      width:38px;height:38px;
+      border:1px solid rgba(217,182,111,.55);
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      color:var(--gold);
+      font-family:"Cormorant Garamond",serif;
+      font-size:1.4rem;
+      box-shadow:0 0 30px rgba(217,182,111,.12);
+      flex:0 0 auto;
+    }
 
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:8px;
-}
+    .brand-text strong{
+      display:block;
+      font-family:"Cormorant Garamond",serif;
+      font-size:1.15rem;
+      line-height:1;
+    }
 
-.grid img{
-  width:100%;
-  height:120px;
-  object-fit:cover;
-  border-radius:12px;
-}
+    .brand-text span{
+      display:block;
+      margin-top:3px;
+      font-size:.65rem;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      white-space:nowrap;
+    }
 
-.bottom-nav{
-  position:fixed;
-  bottom:0;
-  left:0;
-  right:0;
-  max-width:480px;
-  margin:auto;
-  display:flex;
-  justify-content:space-around;
-  padding:10px;
-  background:rgba(10,10,14,0.85);
-  backdrop-filter:blur(16px);
-  border-top:1px solid rgba(255,255,255,0.06);
-}
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:26px;
+      color:#d7d2c9;
+      font-size:.92rem;
+    }
 
-.bottom-nav a{
-  color:#aaa;
-  text-decoration:none;
-  font-size:11px;
-  text-align:center;
-}
+    .nav-links a:hover{color:var(--gold-2)}
 
-.bottom-nav a:hover{
-  color:#25D366;
-}
+    .nav-cta,
+    .btn-primary,
+    .btn-secondary{
+      border-radius:999px;
+      transition:.25s ease;
+    }
 
-.fab{
-  position:fixed;
-  right:16px;
-  bottom:70px;
-  background:#25D366;
-  color:#000;
-  padding:14px 16px;
-  border-radius:50px;
-  font-weight:700;
-  text-decoration:none;
-  box-shadow:0 10px 30px rgba(37,211,102,0.25);
-}
-</style></head><body><div class="app"><div class="header">
-<img src="https://pe56d.s3.amazonaws.com/o_1jmvhkagb1vs04ns7of5bh17r715.png" />
-<h1>DJ PULLEY DE BARBER</h1>
-</div><div class="hero">
-<h2>Premium Cuts. Mobile Barbering.</h2>
-<p>Home service & shop appointments in Randfontein. Book instantly via WhatsApp.</p><a class="btn green" href="https://wa.me/27694397338?text=Hi%20I%20want%20to%20book%20a%20cut">Book Home Service</a>
+    .nav-cta{
+      padding:12px 18px;
+      background:var(--ivory);
+      color:#0d0d0d;
+      font-size:.86rem;
+      font-weight:700;
+    }
 
-<a class="btn green" href="service.html">Services</a>
+    .nav-cta:hover{transform:translateY(-1px)}
 
-<a class="btn glass" href="#gallery">View Gallery</a>
+    .hero{
+      min-height:100svh;
+      display:grid;
+      align-items:end;
+      padding:118px 0 46px;
+      position:relative;
+      isolation:isolate;
+    }
 
-</div><div class="section">
-<div class="title">Services</div><div class="card">
-<h3>Home Barber Service</h3>
-<p>We come to your location fully equipped.</p>
-</div><div class="card">
-<h3>Shop Appointments</h3>
-<p>Walk-in style premium grooming sessions.</p>
-</div><div class="card">
-<h3>Fade & Beard Styling</h3>
-<p>Sharp modern cuts tailored to your style.</p>
-</div>
-</div><div class="section" id="gallery">
-<div class="title">Gallery</div>
-<div class="grid">
-<img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186" />
-<img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033" />
-<img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c" />
-<img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937" />
-</div>
-</div><div class="section">
-<div class="title">Contact</div>
-<div class="card">
-<p>Shop: 7 Main Reef Road, Randfontein, 1759, Gauteng, South Africa</p>
-</div>
-</div></div><a class="fab" href="https://wa.me/27694397338?text=Hi%20I%20want%20to%20book">Book</a>
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-3;
+      background:
+        linear-gradient(90deg, rgba(7,7,7,.95) 0%, rgba(7,7,7,.74) 43%, rgba(7,7,7,.18) 78%),
+        linear-gradient(0deg, rgba(7,7,7,1) 0%, transparent 32%),
+        url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1800&q=88') center/cover no-repeat;
+    }
 
-<div class="bottom-nav">
-<a href="#">Home</a>
-<a href="service.html">Services</a>
-<a href="gallery.html">Gallery</a>
-<a href="#">Book</a>
-<a href="#">Contact</a>
-</div><script>
-if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('data:application/javascript,console.log("PWA Ready")');
-}
-</script></body>
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-2;
+      background:linear-gradient(135deg, transparent 35%, rgba(217,182,111,.07));
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 330px;
+      gap:42px;
+      align-items:end;
+    }
+
+    .hero-copy p{
+      max-width:620px;
+      font-size:1.08rem;
+      margin:26px 0 0;
+      color:#d0cbc2;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:32px;
+    }
+
+    .btn-primary,.btn-secondary{
+      min-height:54px;
+      padding:0 22px;
+      border:1px solid transparent;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      font-weight:700;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,var(--gold-2),var(--gold));
+      color:#15100a;
+      box-shadow:0 12px 40px rgba(217,182,111,.18);
+    }
+
+    .btn-primary:hover{transform:translateY(-2px)}
+
+    .btn-secondary{
+      color:white;
+      border-color:rgba(255,255,255,.18);
+      background:rgba(255,255,255,.06);
+      backdrop-filter:blur(12px);
+    }
+
+    .btn-secondary:hover{background:rgba(255,255,255,.1)}
+
+    .hero-card{
+      background:rgba(16,16,16,.6);
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(18px);
+      border-radius:28px;
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-card .mini{
+      font-size:.76rem;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      color:var(--gold-2);
+    }
+
+    .hero-card strong{
+      display:block;
+      font-family:"Cormorant Garamond",serif;
+      font-size:2rem;
+      margin-top:10px;
+    }
+
+    .hero-card .facts{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .fact{
+      padding:14px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:rgba(255,255,255,.035);
+    }
+
+    .fact b{font-size:.9rem}
+    .fact span{display:block;color:var(--muted);font-size:.74rem;margin-top:5px}
+
+    .trust-strip{
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      background:#0d0d0d;
+    }
+
+    .trust-row{
+      min-height:86px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:1px;
+    }
+
+    .trust-item{
+      padding:21px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      border-right:1px solid var(--line);
+    }
+
+    .trust-item:last-child{border-right:0}
+    .trust-icon{font-size:1.3rem}
+    .trust-item b{display:block;font-size:.88rem}
+    .trust-item small{display:block;margin-top:3px;color:var(--muted)}
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .service-card{
+      background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px;
+      position:relative;
+      overflow:hidden;
+      min-height:280px;
+    }
+
+    .service-card::after{
+      content:"";
+      position:absolute;
+      width:140px;height:140px;
+      border-radius:50%;
+      right:-60px;top:-60px;
+      background:radial-gradient(circle,rgba(217,182,111,.13),transparent 65%);
+    }
+
+    .service-card .num{
+      color:var(--gold);
+      font-size:.74rem;
+      letter-spacing:.16em;
+      font-weight:700;
+    }
+
+    .service-card h3{margin-top:28px}
+    .service-card p{font-size:.94rem}
+    .price{
+      display:flex;
+      align-items:end;
+      gap:8px;
+      margin-top:26px;
+    }
+    .price strong{
+      font-size:1.4rem;
+      color:var(--ivory);
+    }
+    .price span{color:var(--muted);font-size:.8rem}
+
+    .text-link{
+      margin-top:22px;
+      display:inline-flex;
+      color:var(--gold-2);
+      font-weight:700;
+      font-size:.9rem;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:1.15fr .85fr .85fr;
+      grid-auto-rows:220px;
+      gap:14px;
+    }
+
+    .gallery-item{
+      position:relative;
+      border-radius:22px;
+      overflow:hidden;
+      border:1px solid var(--line);
+    }
+
+    .gallery-item:first-child{grid-row:span 2}
+    .gallery-item:nth-child(4){grid-column:span 2}
+    .gallery-item img{
+      height:100%;
+      transition:transform .5s ease;
+    }
+
+    .gallery-item:hover img{transform:scale(1.035)}
+
+    .gallery-overlay{
+      position:absolute;
+      inset:auto 0 0;
+      padding:18px;
+      background:linear-gradient(0deg,rgba(0,0,0,.78),transparent);
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .gallery-overlay b{font-size:.92rem}
+    .gallery-overlay span{font-size:.8rem;color:var(--gold-2)}
+
+    .experience{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:54px;
+      align-items:center;
+    }
+
+    .experience-media{
+      min-height:620px;
+      border-radius:30px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      position:relative;
+    }
+
+    .experience-media img{height:620px}
+    .experience-badge{
+      position:absolute;
+      left:22px;bottom:22px;
+      max-width:250px;
+      padding:18px;
+      border-radius:20px;
+      background:rgba(8,8,8,.74);
+      backdrop-filter:blur(16px);
+      border:1px solid rgba(255,255,255,.12);
+    }
+
+    .experience-badge b{
+      font-family:"Cormorant Garamond",serif;
+      font-size:1.6rem;
+      display:block;
+    }
+
+    .bullet-list{
+      display:grid;
+      gap:18px;
+      margin-top:30px;
+    }
+
+    .bullet{
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+    }
+
+    .bullet-mark{
+      width:34px;height:34px;
+      border-radius:50%;
+      border:1px solid rgba(217,182,111,.4);
+      display:grid;place-items:center;
+      color:var(--gold);
+      flex:0 0 auto;
+    }
+
+    .bullet b{display:block}
+    .bullet span{display:block;color:var(--muted);font-size:.9rem;margin-top:4px;line-height:1.6}
+
+    .reviews{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .review{
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:26px;
+      background:#101010;
+    }
+
+    .stars{color:var(--gold);letter-spacing:.1em}
+    .review p{font-size:.95rem}
+    .review footer{
+      margin-top:24px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .avatar{
+      width:42px;height:42px;
+      border-radius:50%;
+      background:linear-gradient(135deg,#2b2b2b,#161616);
+      display:grid;place-items:center;
+      color:var(--gold-2);
+      border:1px solid var(--line);
+      font-family:"Cormorant Garamond",serif;
+      font-size:1.2rem;
+    }
+
+    .review small{color:var(--muted)}
+
+    .booking-wrap{
+      border:1px solid var(--line);
+      border-radius:32px;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at top right,rgba(217,182,111,.12),transparent 35%),
+        #101010;
+      box-shadow:var(--shadow);
+    }
+
+    .booking-grid{
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+    }
+
+    .booking-copy{
+      padding:46px;
+      border-right:1px solid var(--line);
+    }
+
+    .booking-copy p{max-width:430px}
+    .booking-copy .direct{
+      margin-top:28px;
+      padding-top:24px;
+      border-top:1px solid var(--line);
+      display:grid;
+      gap:10px;
+      color:#d8d3ca;
+      font-size:.9rem;
+    }
+
+    .booking-form{
+      padding:40px;
+      display:grid;
+      gap:16px;
+    }
+
+    .form-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    label{
+      display:grid;
+      gap:8px;
+      font-size:.82rem;
+      color:#d9d4ca;
+      font-weight:600;
+    }
+
+    input,select,textarea{
+      width:100%;
+      border:1px solid rgba(255,255,255,.1);
+      background:#0c0c0c;
+      color:white;
+      border-radius:16px;
+      padding:15px 16px;
+      outline:none;
+    }
+
+    input:focus,select:focus,textarea:focus{
+      border-color:rgba(217,182,111,.65);
+      box-shadow:0 0 0 3px rgba(217,182,111,.08);
+    }
+
+    textarea{min-height:110px;resize:vertical}
+
+    .form-note{
+      color:var(--muted);
+      font-size:.78rem;
+      line-height:1.6;
+      margin:0;
+    }
+
+    .location-grid{
+      display:grid;
+      grid-template-columns:1fr .9fr;
+      gap:22px;
+      align-items:stretch;
+    }
+
+    .location-card,
+    .hours-card{
+      border:1px solid var(--line);
+      border-radius:26px;
+      padding:32px;
+      background:#101010;
+    }
+
+    .detail-line{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      padding:13px 0;
+      border-bottom:1px solid var(--line);
+      color:#d8d3ca;
+    }
+
+    .detail-line:last-child{border-bottom:0}
+    .detail-line span:last-child{color:var(--muted);text-align:right}
+
+    .footer{
+      padding:54px 0 110px;
+      border-top:1px solid var(--line);
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr .8fr;
+      gap:40px;
+    }
+
+    .footer p{max-width:460px;font-size:.9rem}
+    .footer-links{display:grid;gap:11px;color:#cbc5bb;font-size:.9rem}
+    .copyright{
+      margin-top:40px;
+      padding-top:22px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:.78rem;
+    }
+
+    .whatsapp-float{
+      position:fixed;
+      right:18px;
+      bottom:22px;
+      z-index:60;
+      background:var(--success);
+      color:white;
+      border:none;
+      border-radius:999px;
+      min-height:56px;
+      padding:0 18px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      box-shadow:0 16px 36px rgba(37,211,102,.28);
+    }
+
+    .whatsapp-float span:first-child{font-size:1.25rem}
+
+    .mobile-nav{
+      display:none;
+      position:fixed;
+      left:12px;right:12px;bottom:12px;
+      z-index:55;
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:20px;
+      background:rgba(12,12,12,.9);
+      backdrop-filter:blur(18px);
+      padding:8px;
+      grid-template-columns:repeat(4,1fr);
+      box-shadow:var(--shadow);
+    }
+
+    .mobile-nav a{
+      display:grid;
+      place-items:center;
+      gap:4px;
+      min-height:48px;
+      color:#d4cec5;
+      font-size:.67rem;
+    }
+
+    .mobile-nav a span:first-child{font-size:1.05rem}
+
+    @media (max-width: 900px){
+      .nav-links{display:none}
+      .hero-grid,
+      .section-head,
+      .experience,
+      .booking-grid,
+      .location-grid,
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        min-height:92svh;
+        padding-bottom:72px;
+      }
+
+      .hero::before{
+        background:
+          linear-gradient(0deg, rgba(7,7,7,.98) 0%, rgba(7,7,7,.63) 52%, rgba(7,7,7,.25) 100%),
+          url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=88') center/cover no-repeat;
+      }
+
+      .hero-grid{gap:26px}
+      .hero-card{max-width:520px}
+      .trust-row{grid-template-columns:1fr 1fr}
+      .trust-item:nth-child(2){border-right:0}
+      .service-grid{grid-template-columns:1fr 1fr}
+      .gallery{grid-template-columns:1fr 1fr}
+      .gallery-item:first-child{grid-row:span 1}
+      .gallery-item:nth-child(4){grid-column:span 1}
+      .experience-media{min-height:480px}
+      .experience-media img{height:480px}
+      .reviews{grid-template-columns:1fr}
+      .booking-copy{border-right:0;border-bottom:1px solid var(--line)}
+    }
+
+    @media (max-width: 640px){
+      .container{width:min(100% - 22px,1160px)}
+      .section{padding:78px 0}
+      .topbar .nav{height:66px}
+      .brand-text span{display:none}
+      .nav-cta{padding:10px 14px;font-size:.78rem}
+      .hero{padding-top:96px}
+      h1{font-size:clamp(3.2rem,18vw,5.2rem)}
+      h2{font-size:clamp(2.6rem,12vw,4rem)}
+      .hero-copy p{font-size:.98rem}
+      .hero-actions{display:grid;grid-template-columns:1fr}
+      .btn-primary,.btn-secondary{width:100%}
+      .hero-card{padding:18px}
+      .trust-row{grid-template-columns:1fr}
+      .trust-item{border-right:0;border-bottom:1px solid var(--line)}
+      .trust-item:last-child{border-bottom:0}
+      .service-grid{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr;grid-auto-rows:300px}
+      .section-head{margin-bottom:34px}
+      .experience{gap:28px}
+      .experience-media,
+      .experience-media img{height:430px;min-height:430px}
+      .booking-copy,.booking-form,.location-card,.hours-card{padding:24px}
+      .form-row{grid-template-columns:1fr}
+      .whatsapp-float{
+        width:54px;
+        height:54px;
+        padding:0;
+        justify-content:center;
+        bottom:86px;
+      }
+      .whatsapp-float span:last-child{display:none}
+      .mobile-nav{display:grid}
+      .footer{padding-bottom:120px}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Flawless Beauty by Freda home">
+        <div class="brand-mark">F</div>
+        <div class="brand-text">
+          <strong>Flawless Beauty by Freda</strong>
+          <span>Hair • Beauty • Self-Care</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#experience">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="nav-cta" href="#book">Book Appointment</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Luxury beauty, personally delivered</span>
+          <h1>Beauty that feels as flawless as it looks.</h1>
+          <p>
+            Step into a premium beauty experience designed around confidence, detail and personal care.
+            Discover your next look, choose your service and book in just a few taps.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn-primary" href="#book">Book Your Appointment</a>
+            <a class="btn-secondary whatsapp-link" href="#" data-message="Hi Freda 👋 I found Flawless Beauty online and I'd like to book an appointment.">Chat on WhatsApp</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <span class="mini">Today at Flawless</span>
+          <strong>Your next beauty moment starts here.</strong>
+          <p>Hair, beauty and self-care with a premium personal touch.</p>
+          <div class="facts">
+            <div class="fact">
+              <b>Easy booking</b>
+              <span>Choose your preferred date and service.</span>
+            </div>
+            <div class="fact">
+              <b>Direct chat</b>
+              <span>Reach Freda instantly on WhatsApp.</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-row">
+        <div class="trust-item">
+          <span class="trust-icon">✨</span>
+          <div><b>Premium Finish</b><small>Detail in every look</small></div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">💎</span>
+          <div><b>Personal Service</b><small>Beauty tailored to you</small></div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">📲</span>
+          <div><b>Fast Booking</b><small>Book from your phone</small></div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">❤️</span>
+          <div><b>Confidence First</b><small>Leave feeling flawless</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Signature services</span>
+            <h2>Choose the look that fits your moment.</h2>
+          </div>
+          <p>
+            Replace the example prices below with Freda's real pricing. Every service can send a customer
+            directly into the booking section or start a service-specific WhatsApp conversation.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="num">01 / HAIR</span>
+            <h3>Wig Installation</h3>
+            <p>Professional fitting, secure installation, styling and a polished finish.</p>
+            <div class="price"><strong>From R650</strong><span>/ appointment</span></div>
+            <a href="#book" class="text-link service-select" data-service="Wig Installation">Book this service →</a>
+          </article>
+
+          <article class="service-card">
+            <span class="num">02 / HAIR</span>
+            <h3>Frontal Installation</h3>
+            <p>Seamless frontal work with styling designed to complement your face and finish.</p>
+            <div class="price"><strong>From R850</strong><span>/ appointment</span></div>
+            <a href="#book" class="text-link service-select" data-service="Frontal Installation">Book this service →</a>
+          </article>
+
+          <article class="service-card">
+            <span class="num">03 / HAIR</span>
+            <h3>Braids & Protective Styles</h3>
+            <p>Clean, elegant protective styling for everyday confidence or special occasions.</p>
+            <div class="price"><strong>From R500</strong><span>/ appointment</span></div>
+            <a href="#book" class="text-link service-select" data-service="Braids & Protective Styles">Book this service →</a>
+          </article>
+
+          <article class="service-card">
+            <span class="num">04 / BEAUTY</span>
+            <h3>Makeup</h3>
+            <p>Soft glam, event-ready beauty and personalized finishing for your occasion.</p>
+            <div class="price"><strong>From R450</strong><span>/ session</span></div>
+            <a href="#book" class="text-link service-select" data-service="Makeup">Book this service →</a>
+          </article>
+
+          <article class="service-card">
+            <span class="num">05 / BEAUTY</span>
+            <h3>Nails</h3>
+            <p>Beautifully finished nails with an elegant look made to match your personal style.</p>
+            <div class="price"><strong>From R300</strong><span>/ session</span></div>
+            <a href="#book" class="text-link service-select" data-service="Nails">Book this service →</a>
+          </article>
+
+          <article class="service-card">
+            <span class="num">06 / CUSTOM</span>
+            <h3>Beauty Consultation</h3>
+            <p>Not sure what to book? Speak to Freda and get help choosing the right service.</p>
+            <div class="price"><strong>Let's talk</strong><span>/ WhatsApp</span></div>
+            <a href="#" class="text-link whatsapp-link" data-message="Hi Freda 👋 I'm not sure which service to book. Can you help me choose the right option?">Ask Freda on WhatsApp →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">The flawless gallery</span>
+            <h2>See the look. Fall in love. Book it.</h2>
+          </div>
+          <p>Use this section for Freda's real work. Strong before-and-after photos can become one of the highest-converting parts of the site.</p>
+        </div>
+
+        <div class="gallery">
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1000&q=85" alt="Beautiful salon hairstyle" />
+            <figcaption class="gallery-overlay"><b>Signature Finish</b><span>Book this look</span></figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=900&q=85" alt="Beauty salon styling" />
+            <figcaption class="gallery-overlay"><b>Styled Detail</b><span>Explore</span></figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=900&q=85" alt="Luxury hair salon service" />
+            <figcaption class="gallery-overlay"><b>Luxury Hair</b><span>Explore</span></figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=85" alt="Salon beauty transformation" />
+            <figcaption class="gallery-overlay"><b>Flawless Transformation</b><span>Book your moment</span></figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=85" alt="Premium salon interior" />
+            <figcaption class="gallery-overlay"><b>The Experience</b><span>Feel flawless</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container experience">
+        <div class="experience-media">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=88" alt="Elegant premium salon interior">
+          <div class="experience-badge">
+            <b>Beauty is personal.</b>
+            <span style="color:var(--muted);font-size:.84rem;line-height:1.6;display:block;margin-top:6px;">
+              Every appointment should feel considered, comfortable and made for you.
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <span class="eyebrow">Why flawless</span>
+          <h2>More than an appointment. A confidence experience.</h2>
+          <p>
+            Flawless Beauty by Freda is positioned as a premium, personal beauty destination — where every detail
+            is about helping the client look good, feel comfortable and leave with confidence.
+          </p>
+
+          <div class="bullet-list">
+            <div class="bullet">
+              <div class="bullet-mark">01</div>
+              <div><b>Personal attention</b><span>Each client gets focused care instead of feeling rushed through the chair.</span></div>
+            </div>
+            <div class="bullet">
+              <div class="bullet-mark">02</div>
+              <div><b>Premium finish</b><span>The final look is styled with detail, polish and a strong eye for presentation.</span></div>
+            </div>
+            <div class="bullet">
+              <div class="bullet-mark">03</div>
+              <div><b>Convenient communication</b><span>Book online or speak directly with Freda on WhatsApp when you need help.</span></div>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn-primary" href="#book">Book Now</a>
+            <a class="btn-secondary whatsapp-link" href="#" data-message="Hi Freda 👋 I'd like to know more about your beauty services.">Message Freda</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Client love</span>
+            <h2>Trust is what turns visitors into bookings.</h2>
+          </div>
+          <p>Replace these sample reviews with real verified client feedback, names and photos when available.</p>
+        </div>
+
+        <div class="reviews">
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <p>“The service felt so personal and my hair came out beautifully. I left feeling completely confident.”</p>
+            <footer>
+              <div class="avatar">A</div>
+              <div><b>Amanda</b><small>Happy client</small></div>
+            </footer>
+          </article>
+
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <p>“Easy booking, great communication and such a clean finish. I already know I'll be coming back.”</p>
+            <footer>
+              <div class="avatar">N</div>
+              <div><b>Naledi</b><small>Returning client</small></div>
+            </footer>
+          </article>
+
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <p>“Freda really listened to what I wanted and made the whole experience feel comfortable and premium.”</p>
+            <footer>
+              <div class="avatar">T</div>
+              <div><b>Thando</b><small>Beauty client</small></div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="book">
+      <div class="container">
+        <div class="booking-wrap">
+          <div class="booking-grid">
+            <div class="booking-copy">
+              <span class="eyebrow">Book your appointment</span>
+              <h2>Ready to feel flawless?</h2>
+              <p>
+                Fill in your preferred service, date and time. When you submit, the site prepares your appointment request
+                and sends it to Freda through WhatsApp for fast confirmation.
+              </p>
+
+              <div class="direct">
+                <span>✓ Fast mobile booking</span>
+                <span>✓ WhatsApp confirmation</span>
+                <span>✓ Perfect for Instagram & Facebook traffic</span>
+              </div>
+            </div>
+
+            <form class="booking-form" id="bookingForm">
+              <div class="form-row">
+                <label>
+                  Full name
+                  <input id="name" type="text" placeholder="Your name" required>
+                </label>
+                <label>
+                  Phone number
+                  <input id="phone" type="tel" placeholder="+27..." required>
+                </label>
+              </div>
+
+              <div class="form-row">
+                <label>
+                  Service
+                  <select id="service" required>
+                    <option value="">Choose a service</option>
+                    <option>Wig Installation</option>
+                    <option>Frontal Installation</option>
+                    <option>Braids & Protective Styles</option>
+                    <option>Makeup</option>
+                    <option>Nails</option>
+                    <option>Beauty Consultation</option>
+                  </select>
+                </label>
+
+                <label>
+                  Preferred date
+                  <input id="date" type="date" required>
+                </label>
+              </div>
+
+              <div class="form-row">
+                <label>
+                  Preferred time
+                  <select id="time" required>
+                    <option value="">Choose a time</option>
+                    <option>09:00</option>
+                    <option>10:30</option>
+                    <option>12:00</option>
+                    <option>13:30</option>
+                    <option>15:00</option>
+                    <option>16:30</option>
+                  </select>
+                </label>
+
+                <label>
+                  Occasion
+                  <select id="occasion">
+                    <option>Regular appointment</option>
+                    <option>Birthday</option>
+                    <option>Wedding / Event</option>
+                    <option>Photoshoot</option>
+                    <option>Other</option>
+                  </select>
+                </label>
+              </div>
+
+              <label>
+                Notes
+                <textarea id="notes" placeholder="Tell Freda anything important about the look you want..."></textarea>
+              </label>
+
+              <button class="btn-primary" type="submit">Send Booking on WhatsApp</button>
+
+              <p class="form-note">
+                This demo does not store personal information. Update the WhatsApp number in the JavaScript at the bottom of the file before publishing.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Visit flawless</span>
+            <h2>Easy to find. Easy to book.</h2>
+          </div>
+          <p>Replace the sample location, opening hours and contact details below with Freda's real business information.</p>
+        </div>
+
+        <div class="location-grid">
+          <div class="location-card">
+            <h3>Flawless Beauty by Freda</h3>
+            <p>Premium hair, beauty and self-care.</p>
+
+            <div class="detail-line"><span>Location</span><span>Johannesburg, South Africa</span></div>
+            <div class="detail-line"><span>WhatsApp</span><span>+27 XX XXX XXXX</span></div>
+            <div class="detail-line"><span>Instagram</span><span>@flawlessbeautybyfreda</span></div>
+
+            <div class="hero-actions">
+              <a class="btn-primary whatsapp-link" href="#" data-message="Hi Freda 👋 I'd like directions to Flawless Beauty by Freda.">Get Directions / WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="hours-card">
+            <h3>Opening Hours</h3>
+            <div class="detail-line"><span>Monday</span><span>09:00 – 18:00</span></div>
+            <div class="detail-line"><span>Tuesday</span><span>09:00 – 18:00</span></div>
+            <div class="detail-line"><span>Wednesday</span><span>09:00 – 18:00</span></div>
+            <div class="detail-line"><span>Thursday</span><span>09:00 – 18:00</span></div>
+            <div class="detail-line"><span>Friday</span><span>09:00 – 18:00</span></div>
+            <div class="detail-line"><span>Saturday</span><span>08:00 – 17:00</span></div>
+            <div class="detail-line"><span>Sunday</span><span>By appointment</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand">
+            <div class="brand-mark">F</div>
+            <div class="brand-text">
+              <strong>Flawless Beauty by Freda</strong>
+              <span>Hair • Beauty • Self-Care</span>
+            </div>
+          </div>
+          <p>Designed to turn social media visitors, referrals and Google searches into real appointments.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size:1.4rem;margin-bottom:18px;">Explore</h3>
+          <div class="footer-links">
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#book">Book Appointment</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="font-size:1.4rem;margin-bottom:18px;">Connect</h3>
+          <div class="footer-links">
+            <a class="whatsapp-link" href="#" data-message="Hi Freda 👋 I found your website and I'd like to know more.">WhatsApp</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © <span id="year"></span> Flawless Beauty by Freda. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <button class="whatsapp-float whatsapp-link" data-message="Hi Freda 👋 I found Flawless Beauty online and I'd like to book an appointment." aria-label="Chat on WhatsApp">
+    <span>💬</span><span>WhatsApp Freda</span>
+  </button>
+
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="#home"><span>⌂</span><span>Home</span></a>
+    <a href="#services"><span>✦</span><span>Services</span></a>
+    <a href="#gallery"><span>▦</span><span>Gallery</span></a>
+    <a href="#book"><span>◷</span><span>Book</span></a>
+  </nav>
+
+  <script>
+    // IMPORTANT: Replace this placeholder with Freda's WhatsApp number.
+    // Use international format with digits only, e.g. South Africa: 27821234567
+    const WHATSAPP_NUMBER = "27XXXXXXXXX";
+
+    const buildWhatsAppUrl = (message) => {
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    };
+
+    document.querySelectorAll(".whatsapp-link").forEach(el => {
+      el.addEventListener("click", (event) => {
+        event.preventDefault();
+        const message = el.dataset.message || "Hi Freda 👋 I'd like to book an appointment.";
+        window.open(buildWhatsAppUrl(message), "_blank");
+      });
+    });
+
+    document.querySelectorAll(".service-select").forEach(link => {
+      link.addEventListener("click", () => {
+        const service = link.dataset.service;
+        setTimeout(() => {
+          const select = document.getElementById("service");
+          select.value = service;
+        }, 250);
+      });
+    });
+
+    const dateInput = document.getElementById("date");
+    const today = new Date();
+    const isoToday = today.toISOString().split("T")[0];
+    dateInput.min = isoToday;
+
+    document.getElementById("bookingForm").addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const service = document.getElementById("service").value;
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
+      const occasion = document.getElementById("occasion").value;
+      const notes = document.getElementById("notes").value.trim();
+
+      const message =
+`Hi Freda 👋
+
+I'd like to request an appointment at Flawless Beauty by Freda.
+
+Name: ${name}
+Phone: ${phone}
+Service: ${service}
+Preferred date: ${date}
+Preferred time: ${time}
+Occasion: ${occasion}
+Notes: ${notes || "None"}
+
+Please confirm availability. Thank you ✨`;
+
+      window.open(buildWhatsAppUrl(message), "_blank");
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
